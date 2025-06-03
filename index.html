@@ -1,164 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harvest Stores</title>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: #F5F5DC;
-      margin: 0;
-      padding: 0;
-      color: #5A4A3B;
-    }
-    header {
-      background: #D2B48C;
-      color: white;
-      padding: 2em 1em 1em;
-      text-align: center;
-      border-radius: 0 0 2em 2em;
-    }
-    header img {
-      max-width: 100px;
-      margin-bottom: 0.5em;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1em;
-      background: white;
-      padding: 1em;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 1px solid #ccc;
-    }
-    nav a {
-      text-decoration: none;
-      color: #D2B48C;
-      font-weight: 600;
-      font-size: 1em;
-    }
-    .mobile-menu {
-      display: none;
-    }
-    section {
-      padding: 2em 1.5em;
-      margin: 1em auto;
-      background: white;
-      border-radius: 1.5em;
-      max-width: 800px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-    h2 {
-      color: #D2B48C;
-      font-size: 1.5em;
-    }
-    ul li {
-      margin: 0.5em 0;
-      padding-left: 1em;
-      position: relative;
-    }
-    ul li::before {
-      content: "\1F342 ";
-      position: absolute;
-      left: 0;
-    }
-    a {
-      color: #D2B48C;
-    }
-    footer {
-      background: #5A4A3B;
-      color: white;
-      text-align: center;
-      padding: 1.5em;
-      margin-top: 2em;
-      border-radius: 2em 2em 0 0;
-    }
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-      }
-      .mobile-menu {
-        display: block;
-        background-color: #D2B48C;
-        color: white;
-        padding: 1em;
-        text-align: right;
-        font-size: 1.5em;
-        cursor: pointer;
-      }
-      .mobile-nav-links {
-        display: none;
-        background: white;
-        text-align: center;
-        padding: 1em;
-        border-bottom: 1px solid #ccc;
-      }
-      .mobile-nav-links a {
-        display: block;
-        margin: 0.5em 0;
-        color: #D2B48C;
-        font-weight: 600;
-        text-decoration: none;
-      }
-    }
-  </style>
-  <script>
-    function toggleMenu() {
-      const links = document.getElementById('mobileNavLinks');
-      links.style.display = links.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violet Group | Tech Innovation</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ffffff, #7d00ff);
+            color: white;
+            text-align: center;
+        }
+        header {
+            padding: 40px;
+            background: linear-gradient(to right, #7d00ff, #5700b3);
+            font-size: 26px;
+            font-weight: bold;
+        }
+        .container {
+            padding: 60px;
+        }
+        .button {
+            background: linear-gradient(to right, #5700b3, #7d00ff);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background: linear-gradient(to right, #7d00ff, #5700b3);
+            transform: scale(1.05);
+        }
+        .products {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 50px;
+        }
+        .product-card {
+            background: rgba(125, 0, 255, 0.85);
+            padding: 20px;
+            border-radius: 15px;
+            width: 300px;
+            text-align: left;
+            transition: 0.3s;
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .links {
+            padding: 50px;
+        }
+        .link-button {
+            background: linear-gradient(to right, #5700b3, #7d00ff);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 10px;
+            display: inline-block;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .link-button:hover {
+            background: linear-gradient(to right, #7d00ff, #5700b3);
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Green_leaf_icon.svg" alt="Logo" />
-    <h1>Harvest Stores</h1>
-    <p>Your favorite Ro-Store experience!</p>
-  </header>
 
-  <div class="mobile-menu" onclick="toggleMenu()">☰</div>
-  <div class="mobile-nav-links" id="mobileNavLinks">
-    <a href="#about">About Us</a>
-    <a href="#rules">Rules</a>
-    <a href="#links">Links</a>
-  </div>
+<header>
+    Violet Group | Innovating the Future
+</header>
 
-  <nav>
-    <a href="#about">About Us</a>
-    <a href="#rules">Rules</a>
-    <a href="#links">Links</a>
-  </nav>
+<div class="container">
+    <h2>Community Links</h2>
+    <a href="https://www.roblox.com/communities/35626485/Violet-HUB#!/about" target="_blank" class="link-button">Roblox Group</a>
+    <a href="https://discord.gg/DJSvRzv6Jk" target="_blank" class="link-button">Discord Server</a>
+</div>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Welcome to Harvest Stores, your premium Ro-Store destination on Roblox. We are passionate about delivering high-quality products, unique designs, and an enjoyable shopping experience to our community. Whether you're a frequent shopper or a curious visitor, we aim to serve you with excellence and creativity every step of the way. Our branding is inspired by warmth, nature, and a cozy harvest aesthetic.</p>
-  </section>
+<div class="products">
+    <a href="https://www.roblox.com/games/73781820365556/Product-Hub" target="_blank" class="product-card">
+        <img src="mytools.jpg" alt="MyTools">
+        <h3>MyTools</h3>
+        <p>AutoRanking tools, easy to use.</p>
+    </a>
+    <a href="https://www.roblox.com/games/73781820365556/Product-Hub" target="_blank" class="product-card">
+        <img src="tannoy.jpg" alt="Tannoy System">
+        <h3>Tannoy System</h3>
+        <p>Free to use, ipad style Tannoy System</p>
+    </a>
+    <a href="https://www.roblox.com/games/73781820365556/Product-Hub" target="_blank" class="product-card">
+        <img src="retail.jpg" alt="Retail kit">
+        <h3>Retail Kit</h3>
+        <p>Advanced Modern Retail Kit.</p>
+    </a>
+</div>
 
-  <section id="rules">
-    <h2>Rules</h2>
-    <ul>
-      <li>Be respectful to all members and staff.</li>
-      <li>Do not spam or advertise other groups/servers.</li>
-      <li>Follow all Roblox community guidelines and Discord Terms of Service.</li>
-      <li>Report any inappropriate behavior to a moderator or admin.</li>
-      <li>Use appropriate channels for inquiries or help.</li>
-    </ul>
-  </section>
-
-  <section id="links">
-    <h2>Links</h2>
-    <p><a href="https://www.roblox.com/communities/34810273/Simply-Fresh-Corportation#!/about" target="_blank">🌿 Roblox Group</a></p>
-    <p><a href="https://discord.gg/MA3baX3Q3d" target="_blank">🌿 Discord Server</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Harvest Stores. All rights reserved.</p>
-  </footer>
 </body>
 </html>
