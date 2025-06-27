@@ -3,61 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hello I'm Iulian</title>
+  <title>Iulian's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      color: #333;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
-    .container {
-      max-width: 800px;
-      margin: 50px auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(135deg, #1a1a1a, #2e005f);
+      color: #f2f2f2;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
+
+    .banner {
+      width: 100%;
+      background: #6a0dad;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .card {
+      background: #181818;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+      max-width: 700px;
+      width: 90%;
+      margin-top: 40px;
+    }
+
     h1 {
-      color: #6a0dad;
+      font-size: 2.2rem;
+      color: #a855f7;
+      margin-bottom: 20px;
     }
+
     h2 {
-      color: #444;
-      border-bottom: 1px solid #ddd;
+      font-size: 1.4rem;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #333;
       padding-bottom: 5px;
     }
-    .group {
-      margin-top: 20px;
+
+    p {
+      font-size: 1.1rem;
+      color: #ccc;
     }
-    .group a {
-      display: inline-block;
-      margin-right: 10px;
-      padding: 8px 12px;
-      background: #6a0dad;
+
+    .group {
+      margin-top: 15px;
+    }
+
+    .group strong {
+      font-weight: 600;
       color: #fff;
-      border-radius: 5px;
+    }
+
+    .button-link {
+      display: inline-block;
+      margin: 10px 10px 0 0;
+      padding: 12px 18px;
+      background: linear-gradient(135deg, #6a0dad, #8e44ad);
+      color: #fff;
+      border-radius: 10px;
       text-decoration: none;
+      font-weight: 600;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .group a:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+    .button-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     }
+
     .footer {
       margin-top: 40px;
       font-size: 1.2em;
       text-align: center;
+      color: #aaa;
     }
+
     .emoji {
       font-size: 1.5em;
       vertical-align: middle;
     }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.7rem;
+      }
+      .banner {
+        font-size: 1.5rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="banner">My Portfolio</div>
+
+  <div class="card">
     <h1>Hello, I'm Iulian and this is the stuff I do</h1>
     
     <h2>About Me</h2>
@@ -66,8 +122,8 @@
     <h2>Groups I Own</h2>
     <div class="group">
       <strong>Violet Group</strong> – 250 Members<br/>
-      <a href="https://discord.gg/m6Hf9yH9uH" target="_blank">Discord Link</a>
-      <a href="https://www.roblox.com/communities/35626485/Violet-HUB#!/about" target="_blank">Roblox Group</a>
+      <a class="button-link" href="https://discord.gg/m6Hf9yH9uH" target="_blank">Discord Link</a>
+      <a class="button-link" href="https://www.roblox.com/communities/35626485/Violet-HUB#!/about" target="_blank">Roblox Group</a>
     </div>
     
     <div class="footer">
